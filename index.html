@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Budget App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    input, select, button {
+      margin: 5px;
+      padding: 5px;
+    }
+
+    li {
+      margin-bottom: 4px;
+    }
+
+    hr {
+      margin: 30px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>💰 Budget App</h1>
+
+  <h2>Catégories</h2>
+
+  <input id="category-input" placeholder="Nom de la catégorie" />
+  <button id="category-add-btn">Ajouter catégorie</button>
+
+  <h3>Liste des catégories</h3>
+  <ul id="category-list"></ul>
+
+  <hr />
+
+  <h2>Dépenses</h2>
+
+
+<input id="exp-label" placeholder="Libellé" />
+<input id="exp-amount" type="number" placeholder="Montant" />
+<input id="exp-date" type="date" />
+
+<select id="exp-category-select">
+  <option value="">Choisir une catégorie...</option>
+</select>
+
+<button id="exp-add-btn">Ajouter dépense</button>
+
+<h3>Liste des dépenses :</h3>
+
+<button id="reset-filter-btn">Voir toutes les dépenses</button>
+
+<p id="category-summary">Toutes catégories : 0€</p>
+<ul id="expense-list"></ul>
+
+
+  <script src="./renderer.js"></script>
+</body>
+</html>
