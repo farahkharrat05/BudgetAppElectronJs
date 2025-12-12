@@ -3,15 +3,35 @@
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
+  "build": {
+    "appId": "com.farah.budgetapp",
+    "productName": "BudgetApp",
+    "files": [
+      "main.js",
+      "preload.js",
+      "frontend/dist/**/*",
+      "package.json",
+      "db/**/*"
+    ],
+    "win": {
+      "target": "nsis"
+    }
+  },
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+   "lint:html": "htmlhint frontend/index.html",
+    "test": "jest",
+    "dist": "electron-builder"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "electron": "^39.2.6"
+    "electron": "^39.2.6",
+    "electron-builder": "^26.0.12",
+    "htmlhint": "^1.8.0",
+    "jest": "^30.2.0"
   },
   "dependencies": {
     "sqlite3": "^5.1.7"
